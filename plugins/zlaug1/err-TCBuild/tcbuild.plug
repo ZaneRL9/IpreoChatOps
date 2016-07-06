@@ -1,0 +1,10 @@
+[Core]
+
+Name = TCBuildBot
+Module = tcbuild
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = Plugin for Errbot that allows user to give an ID of a build and trigger that build.

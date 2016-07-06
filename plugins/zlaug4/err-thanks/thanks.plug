@@ -1,0 +1,10 @@
+[Core]
+
+Name = ThanksBot
+Module = thanks
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = Plugin for Errbot that responds to thank yous

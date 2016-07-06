@@ -1,0 +1,10 @@
+[Core]
+
+Name = HelloBot
+Module = hello
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = Plugin for Errbot that responds to hello's

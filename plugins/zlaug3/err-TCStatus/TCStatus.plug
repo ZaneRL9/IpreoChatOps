@@ -1,0 +1,10 @@
+[Core]
+
+Name = TCStatusBot
+Module = tcstatus
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = Plugin for Errbot that allows user to get the current status of available builds.
