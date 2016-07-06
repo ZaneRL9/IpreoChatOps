@@ -150,7 +150,7 @@ BOT_IDENTITY = {
     # 'endpoint' : 'https://api.hipchat.com'
 
     ## Slack mode (comment the others above if using this mode)
-     'token': 'xoxb-49270704385-kVddHIhvWFssY5qSNAaEL36k'
+     'token': 'YOUR TOKEN'
 
     ## Telegram mode (comment the others above if using this mode)
      #'token': '103419016:AAbcd1234...',
@@ -176,7 +176,7 @@ BOT_IDENTITY = {
 #
 # Unix-style glob patterns are supported, so 'gbin@localhost'
 # would be considered an admin if setting '*@localhost'.
-BOT_ADMINS = ('@lee.eason','@zane.laughery')
+BOT_ADMINS = ('email','email')
 
 # Chatrooms your bot should join on startup. For the IRC backend you
 # should include the # sign here. For XMPP rooms that are password
