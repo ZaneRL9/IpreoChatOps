@@ -11,17 +11,17 @@ class TCBuildBot(BotPlugin):
 	"""'TCBuild!' plugin for Errbot"""
 	
 	s = socket.socket()
-	host = '127.0.0.1'
-	port = 89
+	host = ''
+	port = ''
 		
 	@botcmd	
 	def tcbuild(self, msg, args):
 		""" Trigger build. """
-		#tc = TeamCity('zlaughery','zane1234','http://localhost',89)
-		tc = TeamCity('zlaughery','zane1234','127.0.0.1',89)
+		#tc = TeamCity('zlaughery','','http://localhost',port)
+		tc = TeamCity('zlaughery','','',port)
 		
 		#data = tc.get_project_by_project_id('testproj')
-		url = "http://zlaughery:zane1234@127.0.0.1:89/httpAuth/action.html?add2Queue=" + args
+		url = "http://zlaughery:password@hostname:port/httpAuth/action.html?add2Queue=" + args
 		webbrowser.open(url)
 		
 		#return json.dumps(data, indent=4)
