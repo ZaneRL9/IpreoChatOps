@@ -13,17 +13,17 @@ class TCListBot(BotPlugin):
 	"""'TCList!' plugin for Errbot"""
 	
 	s = socket.socket()
-	host = '127.0.0.1'
-	port = 89
-	#url = 'http://127.0.0.1:89/viewLog.html?buildId=11&buildTypeId='
+	host = ''
+	port = ''
+	#url = 'hostname:port/viewLog.html?buildId=11&buildTypeId='
 	
 		
 	@botcmd	
 	def tclist(self, msg, args):
 		""" Get scheduled build list. """
-		#tc = TeamCity('zlaughery','zane1234','http://localhost',89)
-		tc = TeamCity('zlaughery','zane1234','127.0.0.1',89)
-		url = 'http://127.0.0.1:89/queue.html'
+		#tc = TeamCity('zlaughery','','http://localhost',)
+		tc = TeamCity('zlaughery','','',port)
+		url = 'http://hostname:port/queue.html'
 		#webbrowser.open(url)
 		
 		page = requests.get(url, verify=False)
