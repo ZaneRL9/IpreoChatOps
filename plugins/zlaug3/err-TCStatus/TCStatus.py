@@ -20,18 +20,18 @@ class TCStatusBot(BotPlugin):
 	"""'TCStatus!' plugin for Errbot"""
 	
 	s = socket.socket()
-	host = '127.0.0.1'
-	port = 89	
+	host = ''
+	port = ''	
 		
 	@botcmd	
 	def tcstatus(self, msg, args):
 		""" Get build status """
-		#tc = TeamCity('zlaughery','zane1234','http://localhost',89)
-		tc = TeamCity('zlaughery','zane1234','127.0.0.1',89)
+		#tc = TeamCity('zlaughery','','http://localhost',89)
+		tc = TeamCity('zlaughery','','',89)
 		
-		buildsUrl = 'http://127.0.0.1:89/httpAuth/app/rest/builds/'
-		url = 'http://127.0.0.1:89/viewLog.html?buildId=11&buildTypeId='
-		buildInfoUrl = 'http://127.0.0.1:89/httpAuth/app/rest/buildTypes/id:%s/builds/running:false,status:success' % args
+		buildsUrl = 'http:///httpAuth/app/rest/builds/'
+		url = 'http:///viewLog.html?buildId=11&buildTypeId='
+		buildInfoUrl = 'http:///httpAuth/app/rest/buildTypes/id:%s/builds/running:false,status:success' % args
 		"""
 		Uses TeamCity builds list url to parse information straight from the source code.
 		Uses the arguments passed (buildTypeID) to select which build.
