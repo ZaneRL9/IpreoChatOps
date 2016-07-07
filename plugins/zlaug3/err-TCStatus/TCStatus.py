@@ -26,8 +26,8 @@ class TCStatusBot(BotPlugin):
 	@botcmd	
 	def tcstatus(self, msg, args):
 		""" Get build status """
-		#tc = TeamCity('zlaughery','','http://localhost',89)
-		tc = TeamCity('zlaughery','','',89)
+		#tc = TeamCity('zlaughery','','http://localhost',port)
+		tc = TeamCity('zlaughery','','',port)
 		
 		buildsUrl = 'http:///httpAuth/app/rest/builds/'
 		url = 'http:///viewLog.html?buildId=11&buildTypeId='
